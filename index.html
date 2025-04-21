@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diplomatura en Superpoderes Digitales</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    header button {
+      background-color: #ff5c5c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .curso {
+      margin: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .curso h2 {
+      margin: 0;
+      padding: 15px;
+      color: white;
+      cursor: pointer;
+    }
+    .curso-content {
+      display: none;
+      animation: fadeIn 0.5s;
+    }
+    .semana {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #eee;
+      border-bottom: 1px solid #ccc;
+    }
+    .semana-content {
+      display: none;
+      padding: 10px 30px;
+      background-color: #fdfdfd;
+    }
+    .curso-1 { background-color: #1e90ff; }
+    .curso-1 .semana { background-color: #cce5ff; }
+
+    .curso-2 { background-color: #28a745; }
+    .curso-2 .semana { background-color: #d4edda; }
+
+    .curso-3 { background-color: #ffc107; }
+    .curso-3 .semana { background-color: #fff3cd; }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Diplomatura en Superpoderes Digitales</h1>
+    <button onclick="cerrarTodo()"><i class="fas fa-arrow-up"></i> Cerrar todo e ir al inicio</button>
+  </header>
+
+  <div class="curso curso-1">
+    <h2 onclick="toggleCurso(this)"><i class="fas fa-brain"></i> Curso 1 – Domina la Programación con la Mente</h2>
+    <div class="curso-content">
+      <div class="semana" onclick="toggleSemana(this)">Semana 1: Introducción a la programación visual</div>
+      <div class="semana-content">Exploramos Tinkercad y ArduinoBlocks. Entendemos qué es una placa Arduino y cómo la programamos sin escribir código.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 2: Primeros circuitos con luces</div>
+      <div class="semana-content">Aprendemos a encender y apagar LEDs virtuales en Tinkercad, usando bloques como si fueran piezas de LEGO.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 3: Entrenando a ChatGPT como programador</div>
+      <div class="semana-content">Aprendemos a hablar con la IA para que genere código de Arduino. Instrucciones simples para resultados mágicos.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 4: Laboratorio remoto - LEDs reales</div>
+      <div class="semana-content">Accedemos al laboratorio remoto y encendemos luces reales desde casa. ¡La magia ocurre a distancia!</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 5: Motores y movimiento</div>
+      <div class="semana-content">Controlamos motores pequeños. Aprendemos cómo hacer que giren y se detengan desde bloques o comandos de IA.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 6: Sensores inteligentes</div>
+      <div class="semana-content">Incorporamos sensores de luz o movimiento. Detectamos el mundo real y reaccionamos con código inteligente.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 7: Proyecto integrador</div>
+      <div class="semana-content">Creamos nuestro primer superproyecto: un sistema con luces, sensores y motores, todo controlado con bloques e IA.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 8: Presentación del superpoder</div>
+      <div class="semana-content">Grabamos o presentamos nuestro proyecto. Obtenemos el diploma de programador mental con Arduino + IA.</div>
+    </div>
+  </div>
+
+  <div class="curso curso-2">
+    <h2 onclick="toggleCurso(this)"><i class="fas fa-mouse-pointer"></i> Curso 2 – Crea Tableros de Comando con IA</h2>
+    <div class="curso-content">
+      <div class="semana" onclick="toggleSemana(this)">Semana 1: ¿Qué es un tablero de comando?</div>
+      <div class="semana-content">Aprendemos la idea de un dashboard visual para controlar luces, motores o sensores desde la web.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 2: Diseño de botones y sliders</div>
+      <div class="semana-content">Usamos IA para diseñar botones, interruptores, barras deslizantes y trackballs con estilo futurista.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 3: Código HTML/CSS generado por IA</div>
+      <div class="semana-content">Aprendemos a pedirle a ChatGPT que genere el código web necesario para construir interfaces interactivas.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 4: Comunicación con placas</div>
+      <div class="semana-content">Integramos la web con las placas. Pulsar un botón en la web enciende una luz en la vida real.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 5: Estilos y personalización visual</div>
+      <div class="semana-content">Personalizamos el aspecto del tablero para que luzca profesional, moderno y único.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 6: Automatización inteligente</div>
+      <div class="semana-content">Creamos tableros que no solo controlan, sino que toman decisiones con la ayuda de la IA.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 7: Proyecto final</div>
+      <div class="semana-content">Construimos nuestro tablero maestro: una interfaz IA + web + hardware. ¡Nuestro centro de control de superhéroes!</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 8: Exhibición y diploma</div>
+      <div class="semana-content">Presentamos nuestros tableros, compartimos experiencias y obtenemos el diploma como creadores de interfaces inteligentes.</div>
+    </div>
+  </div>
+
+  <div class="curso curso-3">
+    <h2 onclick="toggleCurso(this)"><i class="fas fa-server"></i> Curso 3 – Construye Servidores Web Embebidos</h2>
+    <div class="curso-content">
+      <div class="semana" onclick="toggleSemana(this)">Semana 1: ¿Qué es un servidor embebido?</div>
+      <div class="semana-content">Descubrimos que nuestra placa puede transformarse en una página web viva, sin depender de plataformas externas.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 2: Configuración inicial de ESP8266</div>
+      <div class="semana-content">Preparamos la placa para recibir código embebido que creará su propia web desde cero.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 3: Creación del HTML embebido</div>
+      <div class="semana-content">Le enseñamos a la IA a generar una página web lista para ser almacenada en la placa y servida al mundo.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 4: Control sin intermediarios</div>
+      <div class="semana-content">Comprobamos cómo podemos controlar luces, motores o sensores sin necesidad de plataformas externas.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 5: Automatización directa</div>
+      <div class="semana-content">Nuestra placa toma decisiones automáticamente y actualiza su web de forma autónoma.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 6: Personalización avanzada</div>
+      <div class="semana-content">Editamos el estilo y el diseño de nuestro servidor embebido para que tenga identidad única.</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 7: Proyecto total</div>
+      <div class="semana-content">Creamos nuestro servidor web final: diseño + código + embebido. ¡Una placa con superpoderes!</div>
+      <div class="semana" onclick="toggleSemana(this)">Semana 8: Graduación final</div>
+      <div class="semana-content">Presentamos nuestros servidores, y celebramos la obtención del diploma como Diplomado en Superpoderes Digitales.</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleCurso(header) {
+      const content = header.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleSemana(semana) {
+      const content = semana.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function cerrarTodo() {
+      document.querySelectorAll('.curso-content').forEach(c => c.style.display = 'none');
+      document.querySelectorAll('.semana-content').forEach(s => s.style.display = 'none');
+      window.scrollTo(0, 0);
+    }
+  </script>
+</body>
+</html>
